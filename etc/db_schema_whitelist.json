@@ -1,0 +1,23 @@
+{
+    "space_keep_contacts": {
+        "column": {
+            "contact_id": true,
+            "name": true,
+            "email": true,
+            "telephone": true,
+            "comment": true,
+            "creation_time": true,
+            "update_time": true,
+            "is_answered": true,
+            "store_id": true
+        },
+        "index": {
+            "SPACE_KEEP_CONTACTS_NAME_EMAIL_TELEPHONE_COMMENT": true,
+            "SPACE_KEEP_CONTACTS_STORE_ID": true
+        },
+        "constraint": {
+            "PRIMARY": true,
+            "SPACE_KEEP_CONTACTS_STORE_ID_STORE_STORE_ID": true
+        }
+    }
+}
