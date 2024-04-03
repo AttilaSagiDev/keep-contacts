@@ -89,10 +89,10 @@ interface ContactInterface
     /**
      * Set contact ID
      *
-     * @param int $id
+     * @param int $value
      * @return ContactInterface
      */
-    public function setId(int $id): ContactInterface;
+    public function setId(int $value): ContactInterface;
 
     /**
      * Set contact name
