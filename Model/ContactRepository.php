@@ -104,7 +104,7 @@ class ContactRepository implements ContactRepositoryInterface
         DataObjectHelper $dataObjectHelper,
         DataObjectProcessor $dataObjectProcessor,
         StoreManagerInterface $storeManager,
-        CollectionProcessorInterface $collectionProcessor = null,
+        CollectionProcessorInterface $collectionProcessor,
         ?HydratorInterface $hydrator = null
     ) {
         $this->resource = $resource;
@@ -131,7 +131,7 @@ class ContactRepository implements ContactRepositoryInterface
     public function save(ContactInterface $contact): Contact
     {
         if (empty($contact->getStoreId())) {
-            $contact->setStoreId($this->storeManager->getStore()->getId());
+            $contact->setStoreId((int)$this->storeManager->getStore()->getId());
         }
 
         if ($contact->getId() && $contact instanceof Contact && !$contact->getOrigData()) {

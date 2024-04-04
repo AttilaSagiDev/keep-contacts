@@ -59,7 +59,7 @@ class Contact extends AbstractModel implements ContactInterface, IdentityInterfa
      */
     public function getId(): ?int
     {
-        return $this->getData(self::CONTACT_ID);
+        return (int)$this->getData(self::CONTACT_ID);
     }
 
     /**

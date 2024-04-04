@@ -51,10 +51,10 @@ class Contact extends AbstractDb
      * Save an object
      *
      * @param AbstractModel $object
-     * @return Contact
+     * @return $this
      * @throws \Exception
      */
-    public function save(AbstractModel $object): Contact
+    public function save(AbstractModel $object): static
     {
         $this->entityManager->save($object);
         return $this;

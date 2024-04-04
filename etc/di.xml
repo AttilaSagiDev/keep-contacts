@@ -1,0 +1,31 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2024 Attila Sagi
+ * @license http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
+    <!--<preference for="Space\KeepContacts\Api\Data\ContactSearchResultsInterface"
+                type="Space\KeepContacts\Model\ContactSearchResults" />-->
+    <preference for="Space\KeepContacts\Api\Data\ContactInterface" type="Space\KeepContacts\Model\Contact" />
+    <preference for="Space\KeepContacts\Api\ContactRepositoryInterface" type="Space\KeepContacts\Model\ContactRepository" />
+    <type name="Magento\Framework\Model\Entity\RepositoryFactory">
+        <arguments>
+            <argument name="entities" xsi:type="array">
+                <item name="Space\KeepContacts\Api\Data\ContactInterface"
+                      xsi:type="string">Space\KeepContacts\Api\ContactRepositoryInterface</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\MetadataPool">
+        <arguments>
+            <argument name="metadata" xsi:type="array">
+                <item name="Space\KeepContacts\Api\Data\ContactInterface" xsi:type="array">
+                    <item name="entityTableName" xsi:type="string">space_keep_contacts</item>
+                    <item name="identifierField" xsi:type="string">contact_id</item>
+                </item>
+            </argument>
+        </arguments>
+    </type>
+</config>

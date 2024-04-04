@@ -19,7 +19,7 @@
         <column xsi:type="timestamp" name="update_time" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
                 comment="Contact Modification Time"/>
         <column xsi:type="smallint" name="is_answered" unsigned="false" nullable="false" identity="false"
-                default="1" comment="Is Contact Answered"/>
+                default="0" comment="Is Contact Answered"/>
         <column xsi:type="smallint" name="store_id" unsigned="true" nullable="false" identity="false"
                 comment="Contact Store ID"/>
         <constraint xsi:type="primary" referenceId="PRIMARY">
