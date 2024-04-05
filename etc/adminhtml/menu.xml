@@ -1,0 +1,21 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2024 Attila Sagi
+ * @license http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    <menu>
+        <add id="Space_KeepContacts::keep_contacts" title="Keep Contacts" translate="title"
+             module="Space_KeepContacts" sortOrder="500"
+             parent="Magento_Backend::marketing"
+             resource="Space_KeepContacts::keep_contacts"/>
+        <add id="Space_KeepContacts::contacts" title="Contacts" translate="title"
+             module="Space_KeepContacts" sortOrder="500"
+             parent="Space_KeepContacts::keep_contacts"
+             action="space/contacts"
+             resource="Space_KeepContacts::contacts"/>
+    </menu>
+</config>

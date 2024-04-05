@@ -10,10 +10,15 @@
     <acl>
         <resources>
             <resource id="Magento_Backend::admin">
+                <resource id="Magento_Backend::marketing">
+                    <resource id="Space_KeepContacts::keep_contacts" title="Keep Contacts" translate="title" sortOrder="500">
+                        <resource id="Space_KeepContacts::contacts" title="Contacts" translate="title" sortOrder="500" />
+                    </resource>
+                </resource>
                 <resource id="Magento_Backend::stores">
                     <resource id="Magento_Backend::stores_settings">
                         <resource id="Magento_Config::config">
-                            <resource id="Space_KeepContacts::keep_contacts"
+                            <resource id="Space_KeepContacts::keep_contacts_settings"
                                       title="Keep Contacts" translate="title" />
                         </resource>
                     </resource>

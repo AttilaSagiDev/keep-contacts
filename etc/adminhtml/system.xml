@@ -10,7 +10,7 @@
         <tab id="space_tab" translate="label" sortOrder="500">
             <label>Space Extensions</label>
         </tab>
-        <section id="keep_contacts" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
+        <section id="keep_contacts_settings" translate="label" type="text" sortOrder="100" showInDefault="1" showInWebsite="1" showInStore="1">
             <label>Keep Contacts</label>
             <tab>space_tab</tab>
             <resource>Space_KeepContacts::keep_contacts</resource>
