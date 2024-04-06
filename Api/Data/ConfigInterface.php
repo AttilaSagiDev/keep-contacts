@@ -15,10 +15,6 @@ interface ConfigInterface
      */
     public const XML_PATH_ENABLED = 'keep_contacts_settings/keep_contacts_config/enabled';
 
-    /**
-     * Check if keep contacts module is enabled
-     *
-     * @return bool
-     */
+
     public function isEnabled(): bool;
 }
