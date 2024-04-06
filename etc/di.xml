@@ -29,4 +29,20 @@
             </argument>
         </arguments>
     </type>
+    <type name="Magento\Framework\View\Element\UiComponent\DataProvider\CollectionFactory">
+        <arguments>
+            <argument name="collections" xsi:type="array">
+                <item name="keep_contacts_listing_data_source"
+                      xsi:type="string">Space\KeepContacts\Model\ResourceModel\Contact\Grid\Collection</item>
+            </argument>
+        </arguments>
+    </type>
+    <type name="Space\KeepContacts\Model\ResourceModel\Contact\Grid\Collection">
+        <arguments>
+            <argument name="mainTable" xsi:type="string">space_keep_contacts</argument>
+            <argument name="eventPrefix" xsi:type="string">keep_contacts_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">contacts_grid_collection</argument>
+            <argument name="resourceModel" xsi:type="string">Space\KeepContacts\Model\ResourceModel\Contact</argument>
+        </arguments>
+    </type>
 </config>
