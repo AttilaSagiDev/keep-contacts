@@ -56,7 +56,7 @@ class Collection extends ContactCollection implements SearchResultInterface
      * @param string $eventObject
      * @param string $resourceModel
      * @param string $model
-     * @param AdapterInterface|string|null $connection
+     * @param AdapterInterface|null $connection
      * @param AbstractDb|null $resource
      * @param TimezoneInterface|null $timeZone
      *
@@ -72,7 +72,7 @@ class Collection extends ContactCollection implements SearchResultInterface
         string $eventObject,
         string $resourceModel,
         string $model = Document::class,
-        $connection = null,
+        AdapterInterface $connection = null,
         AbstractDb $resource = null,
         TimezoneInterface $timeZone = null
     ) {
