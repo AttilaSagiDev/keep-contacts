@@ -15,7 +15,7 @@
         <add id="Space_KeepContacts::contacts" title="Contacts" translate="title"
              module="Space_KeepContacts" sortOrder="500"
              parent="Space_KeepContacts::keep_contacts"
-             action="space/contacts"
+             action="keep_contacts/contacts"
              resource="Space_KeepContacts::contacts"/>
     </menu>
 </config>
