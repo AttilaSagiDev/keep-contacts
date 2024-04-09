@@ -19,8 +19,8 @@ class ContactActions extends Column
     /**
      * Url path's
      */
-    public const URL_PATH_EDIT = 'keep_contacts/contact/edit';
-    public const URL_PATH_DELETE = 'keep_contacts/contact/delete';
+    public const URL_PATH_EDIT = 'keep_contacts/contacts/edit';
+    public const URL_PATH_DELETE = 'keep_contacts/contacts/delete';
 
     /**
      * @var UrlInterface
@@ -77,7 +77,7 @@ class ContactActions extends Column
                                     'contact_id' => $item['contact_id']
                                 ]
                             ),
-                            'label' => __('Edit')
+                            'label' => __('Edit / Answer')
                         ],
                         'delete' => [
                             'href' => $this->urlBuilder->getUrl(
