@@ -67,7 +67,7 @@ class SaveContactObserver implements ObserverInterface
     {
         if ($this->config->isEnabled()) {
             try {
-                $params = $observer->getEvent()->getData('request')->getParams();
+                $params = $this->validatedParams($observer->getEvent()->getData('request')->getParams());
                 if (!empty($params)) {
                     $contact = $this->contactFactory->create();
                     $contact->setName($params['name']);
@@ -84,5 +84,25 @@ class SaveContactObserver implements ObserverInterface
                 $this->logger->critical($e->getMessage());
             }
         }
+    }
+
+    /**
+     * Validate params
+     *
+     * @param array $params
+     * @return array
+     * @throws LocalizedException
+     */
+    private function validatedParams(array $params): array
+    {
+        if (trim($params['name']) === ''
+            || trim($params['comment']) === ''
+            || !str_contains($params['email'], '@')
+            || trim($params['hideit']) !== ''
+        ) {
+            throw new LocalizedException(__('Unable to save contact information.'));
+        }
+
+        return $params;
     }
 }
