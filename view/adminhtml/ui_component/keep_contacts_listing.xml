@@ -76,6 +76,20 @@
                     <label translate="true">Delete</label>
                 </settings>
             </action>
+            <action name="set_is_answered">
+                <settings>
+                    <url path="keep_contacts/contacts/massSetIsAnswered"/>
+                    <type>set_is_answered</type>
+                    <label translate="true">Set Is Answered</label>
+                </settings>
+            </action>
+            <action name="set_is_unanswered">
+                <settings>
+                    <url path="keep_contacts/contacts/massSetIsUnanswered"/>
+                    <type>set_is_unanswered</type>
+                    <label translate="true">Set Is Unanswered</label>
+                </settings>
+            </action>
         </massaction>
         <paging name="listing_paging"/>
     </listingToolbar>

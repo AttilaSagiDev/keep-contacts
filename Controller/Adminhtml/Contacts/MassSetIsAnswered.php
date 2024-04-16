@@ -12,6 +12,7 @@ use Space\KeepContacts\Controller\Adminhtml\Contacts;
 use Magento\Framework\App\Action\HttpPostActionInterface;
 use Magento\Ui\Component\MassAction\Filter;
 use Space\KeepContacts\Model\ResourceModel\Contact\CollectionFactory;
+use Space\KeepContacts\Api\ContactRepositoryInterface;
 use Magento\Backend\App\Action\Context;
 use Magento\Framework\App\ResponseInterface;
 use Magento\Framework\Controller\ResultInterface;
@@ -19,7 +20,7 @@ use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Controller\ResultFactory;
 use Magento\Backend\Model\View\Result\Redirect;
 
-class MassDelete extends Contacts implements HttpPostActionInterface
+class MassSetIsAnswered extends Contacts implements HttpPostActionInterface
 {
     /**
      * @var Filter
@@ -32,24 +33,32 @@ class MassDelete extends Contacts implements HttpPostActionInterface
     private CollectionFactory $collectionFactory;
 
     /**
+     * @var ContactRepositoryInterface
+     */
+    private ContactRepositoryInterface $contactRepository;
+
+    /**
      * Constructor
      *
      * @param Context $context
      * @param Filter $filter
      * @param CollectionFactory $collectionFactory
+     * @param ContactRepositoryInterface $contactRepository
      */
     public function __construct(
         Context $context,
         Filter $filter,
-        CollectionFactory $collectionFactory
+        CollectionFactory $collectionFactory,
+        ContactRepositoryInterface $contactRepository
     ) {
         $this->filter = $filter;
         $this->collectionFactory = $collectionFactory;
+        $this->contactRepository = $contactRepository;
         parent::__construct($context);
     }
 
     /**
-     * Mass delete action
+     * Mass set is answered action
      *
      * @return Redirect|ResponseInterface|ResultInterface
      */
@@ -60,16 +69,17 @@ class MassDelete extends Contacts implements HttpPostActionInterface
             $collectionSize = $collection->getSize();
 
             foreach ($collection as $contact) {
-                $contact->delete();
+                $contact->setIsAnswered(true);
+                $this->contactRepository->save($contact);
             }
 
-            $this->messageManager->addSuccessMessage(__('A total of %1 record(s) have been deleted.', $collectionSize));
+            $this->messageManager->addSuccessMessage(__('A total of %1 record(s) have been updated.', $collectionSize));
         } catch (LocalizedException $e) {
             $this->messageManager->addErrorMessage($e->getMessage());
         } catch (\Exception $e) {
             $this->messageManager->addExceptionMessage(
                 $e,
-                __('Something went wrong while deleting the selected items.')
+                __('Something went wrong while updating the selected items.')
             );
         }
 
