@@ -15,9 +15,9 @@
     </argument>
     <settings>
         <buttons>
-            <button name="save" class="Magento\Cms\Block\Adminhtml\Block\Edit\SaveButton"/>
-            <button name="delete" class="Magento\Cms\Block\Adminhtml\Block\Edit\DeleteButton"/>
-            <button name="back" class="Magento\Cms\Block\Adminhtml\Block\Edit\BackButton"/>
+            <button name="save" class="Space\KeepContacts\Block\Adminhtml\Block\Edit\SaveButton"/>
+            <button name="delete" class="Space\KeepContacts\Block\Adminhtml\Block\Edit\DeleteButton"/>
+            <button name="back" class="Space\KeepContacts\Block\Adminhtml\Block\Edit\BackButton"/>
         </buttons>
         <namespace>keep_contacts_form</namespace>
         <dataScope>data</dataScope>
@@ -164,6 +164,25 @@
                 <label translate="true">Comment</label>
                 <dataScope>comment</dataScope>
                 <disabled>true</disabled>
+            </settings>
+            <formElements>
+                <wysiwyg>
+                    <settings>
+                        <wysiwyg>false</wysiwyg>
+                    </settings>
+                </wysiwyg>
+            </formElements>
+        </field>
+        <field name="answer" sortOrder="70" formElement="textarea">
+            <argument name="data" xsi:type="array">
+                <item name="config" xsi:type="array">
+                    <item name="source" xsi:type="string">contact</item>
+                    <item name="rows" xsi:type="number">8</item>
+                </item>
+            </argument>
+            <settings>
+                <label translate="true">Answer</label>
+                <dataScope>answer</dataScope>
             </settings>
             <formElements>
                 <wysiwyg>

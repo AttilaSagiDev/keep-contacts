@@ -18,6 +18,7 @@ interface ContactInterface
     public const EMAIL = 'email';
     public const TELEPHONE = 'telephone';
     public const COMMENT = 'comment';
+    public const ANSWER = 'answer';
     public const CREATION_TIME = 'creation_time';
     public const UPDATE_TIME = 'update_time';
     public const IS_ANSWERED = 'is_answered';
@@ -57,6 +58,13 @@ interface ContactInterface
      * @return string|null
      */
     public function getComment(): ?string;
+
+    /**
+     * Get contact answer
+     *
+     * @return string|null
+     */
+    public function getAnswer(): ?string;
 
     /**
      * Get contact creation time
@@ -125,6 +133,14 @@ interface ContactInterface
      * @return ContactInterface
      */
     public function setComment(string $comment): ContactInterface;
+
+    /**
+     * Set contact answer
+     *
+     * @param string $answer
+     * @return ContactInterface
+     */
+    public function setAnswer(string $answer): ContactInterface;
 
     /**
      * Set contact creation time
