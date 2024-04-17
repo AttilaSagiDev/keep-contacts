@@ -103,6 +103,16 @@ class Contact extends AbstractModel implements ContactInterface, IdentityInterfa
     }
 
     /**
+     * Get contact comment
+     *
+     * @return string|null
+     */
+    public function getAnswer(): ?string
+    {
+        return $this->getData(self::ANSWER);
+    }
+
+    /**
      * Get contact creation time
      *
      * @return string|null
@@ -195,6 +205,17 @@ class Contact extends AbstractModel implements ContactInterface, IdentityInterfa
     public function setComment(string $comment): ContactInterface
     {
         return $this->setData(self::COMMENT, $comment);
+    }
+
+    /**
+     * Set contact answer
+     *
+     * @param string $answer
+     * @return ContactInterface
+     */
+    public function setAnswer(string $answer): ContactInterface
+    {
+        return $this->setData(self::ANSWER, $answer);
     }
 
     /**

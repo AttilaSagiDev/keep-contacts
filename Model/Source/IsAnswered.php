@@ -43,6 +43,6 @@ class IsAnswered implements OptionSourceInterface
      */
     public function getAvailableAnswers(): array
     {
-        return [self::IS_ANSWERED_NO => __('<span>No</span>'), self::IS_ANSWERED_YES => __('Yes')];
+        return [self::IS_ANSWERED_NO => __('No'), self::IS_ANSWERED_YES => __('Yes')];
     }
 }

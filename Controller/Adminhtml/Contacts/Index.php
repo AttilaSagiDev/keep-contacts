@@ -49,7 +49,7 @@ class Index extends Contacts implements HttpGetActionInterface
         $this->initPage($resultPage)->getConfig()->getTitle()->prepend(__('Contacts'));
 
         $dataPersistor = $this->_objectManager->get(DataPersistorInterface::class);
-        $dataPersistor->clear('contacts');
+        $dataPersistor->clear('contact');
 
         return $resultPage;
     }

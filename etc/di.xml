@@ -41,8 +41,16 @@
         <arguments>
             <argument name="mainTable" xsi:type="string">space_keep_contacts</argument>
             <argument name="eventPrefix" xsi:type="string">keep_contacts_grid_collection</argument>
-            <argument name="eventObject" xsi:type="string">contacts_grid_collection</argument>
+            <argument name="eventObject" xsi:type="string">contact_grid_collection</argument>
             <argument name="resourceModel" xsi:type="string">Space\KeepContacts\Model\ResourceModel\Contact</argument>
+        </arguments>
+    </type>
+    <type name="Magento\Framework\EntityManager\HydratorPool">
+        <arguments>
+            <argument name="hydrators" xsi:type="array">
+                <item name="Space\KeepContacts\Api\Data\ContactInterface"
+                      xsi:type="string">Magento\Framework\EntityManager\AbstractModelHydrator</item>
+            </argument>
         </arguments>
     </type>
 </config>

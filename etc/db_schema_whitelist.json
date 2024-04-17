@@ -6,13 +6,14 @@
             "email": true,
             "telephone": true,
             "comment": true,
+            "answer": true,
             "creation_time": true,
             "update_time": true,
             "is_answered": true,
             "store_id": true
         },
         "index": {
-            "SPACE_KEEP_CONTACTS_NAME_EMAIL_TELEPHONE_COMMENT": true,
+            "SPACE_KEEP_CONTACTS_NAME_EMAIL_TELEPHONE_COMMENT_ANSWER": true,
             "SPACE_KEEP_CONTACTS_STORE_ID": true
         },
         "constraint": {
