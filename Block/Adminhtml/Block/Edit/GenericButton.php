@@ -10,6 +10,7 @@ namespace Space\KeepContacts\Block\Adminhtml\Block\Edit;
 
 use Magento\Backend\Block\Widget\Context;
 use Space\KeepContacts\Api\ContactRepositoryInterface;
+use Psr\Log\LoggerInterface;
 use Magento\Framework\Exception\LocalizedException;
 use Magento\Framework\Exception\NoSuchEntityException;
 
@@ -26,17 +27,25 @@ class GenericButton
     protected ContactRepositoryInterface $contactRepository;
 
     /**
+     * @var LoggerInterface
+     */
+    private LoggerInterface $logger;
+
+    /**
      * Constructor
      *
      * @param Context $context
      * @param ContactRepositoryInterface $contactRepository
+     * @param LoggerInterface $logger
      */
     public function __construct(
         Context $context,
-        ContactRepositoryInterface $contactRepository
+        ContactRepositoryInterface $contactRepository,
+        LoggerInterface $logger
     ) {
         $this->context = $context;
         $this->contactRepository = $contactRepository;
+        $this->logger = $logger;
     }
 
     /**
@@ -51,7 +60,7 @@ class GenericButton
                 (int)$this->context->getRequest()->getParam('contact_id')
             )->getId();
         } catch (NoSuchEntityException|LocalizedException $e) {
-            // nothing needed here
+            $this->logger->error($e->getMessage());
         }
 
         return null;
