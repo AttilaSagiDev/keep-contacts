@@ -12,6 +12,11 @@
             <keep_contacts_config>
                 <enabled>0</enabled>
             </keep_contacts_config>
+            <keep_contacts_email>
+                <include_original_comment>0</include_original_comment>
+                <sender_email_identity>custom2</sender_email_identity>
+                <email_template>keep_contacts_settings_keep_contacts_email_email_template</email_template>
+            </keep_contacts_email>
         </keep_contacts_settings>
     </default>
 </config>

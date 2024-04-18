@@ -14,12 +14,42 @@
             <label>Keep Contacts</label>
             <tab>space_tab</tab>
             <resource>Space_KeepContacts::keep_contacts</resource>
-            <group id="keep_contacts_config" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1">
+            <group id="keep_contacts_config" translate="label" type="text" sortOrder="10" showInDefault="1" showInWebsite="1"
+                   showInStore="1">
                 <label>Configuration</label>
-                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1" showInWebsite="1" showInStore="1" canRestore="1">
+                <field id="enabled" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
                     <label>Enable Extension</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Enable extension.</comment>
+                </field>
+            </group>
+            <group id="keep_contacts_email" translate="label" type="text" sortOrder="20" showInDefault="1"
+                   showInWebsite="1" showInStore="1">
+                <label>Email Options</label>
+                <field id="include_contact_comment" translate="label" type="select" sortOrder="10" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Include Contact Comment</label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment>Please select YES, if you want to include original contact comment in the answer.</comment>
+                </field>
+                <field id="sender_email_identity" translate="label comment" type="select" sortOrder="20" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email Sender</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Identity</source_model>
+                    <comment>Please select the email sender from store email addresses.</comment>
+                </field>
+                <field id="cc_email" translate="label comment" type="text" sortOrder="30" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Send CC Emails To</label>
+                    <validate>required-entry validate-email</validate>
+                    <comment>Please enter the cc copy email address where notification will be also sent.</comment>
+                </field>
+                <field id="email_template" translate="label comment" type="select" sortOrder="40" showInDefault="1"
+                       showInWebsite="1" showInStore="1" canRestore="1">
+                    <label>Email Template</label>
+                    <source_model>Magento\Config\Model\Config\Source\Email\Template</source_model>
+                    <comment>Email template chosen based on theme fallback when "Default" option is selected.</comment>
                 </field>
             </group>
         </section>

@@ -1,0 +1,15 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2024 Attila Sagi
+ * @license http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Email:etc/email_templates.xsd">
+    <template id="keep_contacts_settings_keep_contacts_email_email_template"
+              label="Contact Answer"
+              file="keep-contacts-answer.html"
+              type="html"
+              module="Space_KeepContacts" area="adminhtml"/>
+</config>
