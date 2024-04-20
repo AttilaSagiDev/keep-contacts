@@ -5,6 +5,10 @@ on:
     branches:
       - main
       - develop
+  push:
+    branches:
+      - main
+      - develop
 jobs:
   Code-Sniffer-Action:
     runs-on: ubuntu-latest

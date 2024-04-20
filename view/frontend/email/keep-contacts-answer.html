@@ -1,0 +1,42 @@
+<!--
+/**
+ * Copyright (c) 2024 Attila Sagi
+ * @license http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<!--@subject {{trans "Contact Email"}} @-->
+<!--@vars {
+"var store.frontend_name":"Store Name",
+"var customer_name":"Customer Name",
+"var customer_email":"Customer Email",
+"var customer_telephone":"Customer Telephone",
+"var customer_comment|escape|nl2br":"Customer Comment",
+"var answer|escape|nl2br":"Answer",
+"var include_contact_comment":"Include Original Message Details"
+} @-->
+
+{{template config_path="design/email/header_template"}}
+
+<table>
+    <tr class="email-intro">
+        <td>
+            <h3><strong>{{trans "Dear %customer_name!" customer_name=$customer_name}}</strong></h3>
+            <p>{{var answer|escape|nl2br}}</p>
+        </td>
+    </tr>
+    {{depend include_contact_comment}}
+    <tr class="email-information">
+        <td>
+            <p><strong>{{trans "Original Message:"}}</strong></p>
+            <p>{{trans "Store name: %store_name" store_name=$store.frontend_name}}</p>
+            <p>{{trans "Customer Name: %customer_name" customer_name=$customer_name}}</p>
+            <p>{{trans "Customer Email: %customer_email" customer_email=$customer_email}}</p>
+            <p>{{trans "Customer Telephone: %customer_telephone" customer_telephone=$customer_telephone}}</p>
+            <p>{{trans "Message:"}}</p>
+            <p>{{var customer_comment|escape|nl2br}}</p>
+        </td>
+    </tr>
+    {{/depend}}
+</table>
+
+{{template config_path="design/email/footer_template"}}
