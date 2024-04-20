@@ -11,5 +11,5 @@
               label="Contact Answer"
               file="keep-contacts-answer.html"
               type="html"
-              module="Space_KeepContacts" area="adminhtml"/>
+              module="Space_KeepContacts" area="frontend"/>
 </config>

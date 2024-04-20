@@ -57,7 +57,7 @@ class SaveButton extends GenericButton implements ButtonProviderInterface
         return [
             [
                 'id_hard' => 'save_and_close',
-                'label' => __('Save Only'),
+                'label' => __('Save Only And Close'),
                 'data_attribute' => [
                     'mage-init' => [
                         'buttonAdapter' => [
