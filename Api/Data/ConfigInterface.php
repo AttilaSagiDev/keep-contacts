@@ -18,7 +18,8 @@ interface ConfigInterface
     /**
      * Include contact comment path
      */
-    public const XML_PATH_INCLUDE_CONTACT_COMMENT = 'keep_contacts_settings/keep_contacts_email/include_contact_comment';
+    public const XML_PATH_INCLUDE_CONTACT_COMMENT =
+        'keep_contacts_settings/keep_contacts_email/include_contact_comment';
 
     /**
      * Sender email config path

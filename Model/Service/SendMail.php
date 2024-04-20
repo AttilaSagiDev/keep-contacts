@@ -52,6 +52,8 @@ class SendMail
     }
 
     /**
+     * Send answer email
+     *
      * @param ContactInterface $contact
      * @return void
      * @throws LocalizedException
