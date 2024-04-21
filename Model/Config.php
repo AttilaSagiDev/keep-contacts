@@ -51,7 +51,7 @@ class Config implements ConfigInterface
     public function isIncludeContactComment(): bool
     {
         return (bool)$this->scopeConfig->isSetFlag(
-            self::XML_PATH_INCLUDE_CONTACT_COMMENT,
+            self::XML_PATH_INCLUDE_ORIGINAL,
             ScopeInterface::SCOPE_STORE
         );
     }

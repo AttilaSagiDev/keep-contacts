@@ -158,6 +158,7 @@
             <argument name="data" xsi:type="array">
                 <item name="config" xsi:type="array">
                     <item name="source" xsi:type="string">contact</item>
+                    <item name="rows" xsi:type="number">8</item>
                 </item>
             </argument>
             <settings>

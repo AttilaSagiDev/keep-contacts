@@ -27,9 +27,9 @@
             <group id="keep_contacts_email" translate="label" type="text" sortOrder="20" showInDefault="1"
                    showInWebsite="1" showInStore="1">
                 <label>Email Options</label>
-                <field id="include_contact_comment" translate="label" type="select" sortOrder="10" showInDefault="1"
+                <field id="include_original" translate="label" type="select" sortOrder="10" showInDefault="1"
                        showInWebsite="1" showInStore="1" canRestore="1">
-                    <label>Include Contact Comment</label>
+                    <label>Include Original Comment</label>
                     <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
                     <comment>Please select YES, if you want to include original contact comment in the answer.</comment>
                 </field>

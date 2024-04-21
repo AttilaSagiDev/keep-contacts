@@ -18,6 +18,11 @@ class Options extends StoreOptionsColumn
     private const ALL_STORE_VIEWS = '0';
 
     /**
+     * All Store Views label
+     */
+    private const ALL_STORE_VIEWS_LABEL = 'All Store Views';
+
+    /**
      * Get options
      *
      * @return array
@@ -28,8 +33,8 @@ class Options extends StoreOptionsColumn
             return $this->options;
         }
 
-        $this->currentOptions['All Store Views']['label'] = __('All Store Views');
-        $this->currentOptions['All Store Views']['value'] = self::ALL_STORE_VIEWS;
+        $this->currentOptions[self::ALL_STORE_VIEWS_LABEL]['label'] = __('All Store Views');
+        $this->currentOptions[self::ALL_STORE_VIEWS_LABEL]['value'] = self::ALL_STORE_VIEWS;
 
         $this->generateCurrentOptions();
 

@@ -41,7 +41,7 @@ Message:,Message:
 Configuration,Configuration
 "Enable Extension","Enable Extension"
 "Email Options","Email Options"
-"Include Contact Comment","Include Contact Comment"
+"Include Original Comment","Include Original Comment"
 "Email Sender","Email Sender"
 "Please select the email sender from store email addresses.","Please select the email sender from store email addresses."
 "Send CC Emails To","Send CC Emails To"
