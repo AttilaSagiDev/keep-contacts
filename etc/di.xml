@@ -7,8 +7,6 @@
 -->
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:framework:ObjectManager/etc/config.xsd">
     <preference for="Space\KeepContacts\Api\Data\ConfigInterface" type="Space\KeepContacts\Model\Config" />
-    <!--<preference for="Space\KeepContacts\Api\Data\ContactSearchResultsInterface"
-                type="Space\KeepContacts\Model\ContactSearchResults" />-->
     <preference for="Space\KeepContacts\Api\Data\ContactInterface" type="Space\KeepContacts\Model\Contact" />
     <preference for="Space\KeepContacts\Api\ContactRepositoryInterface" type="Space\KeepContacts\Model\ContactRepository" />
     <type name="Magento\Framework\Model\Entity\RepositoryFactory">
