@@ -1,0 +1,16 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2024 Attila Sagi
+ * @license http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<routes xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Webapi:etc/webapi.xsd">
+    <route url="/V1/keepContacts/:contactId" method="GET">
+        <service class="Space\KeepContacts\Api\ContactRepositoryInterface" method="getById"/>
+        <resources>
+            <resource ref="Space_KeepContacts::keep_contacts"/>
+        </resources>
+    </route>
+</routes>

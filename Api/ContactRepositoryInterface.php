@@ -29,7 +29,7 @@ interface ContactRepositoryInterface
      * Retrieve contact
      *
      * @param int $contactId
-     * @return ContactInterface
+     * @return \Space\KeepContacts\Api\Data\ContactInterface
      * @throws LocalizedException
      */
     public function getById(int $contactId): ContactInterface;
