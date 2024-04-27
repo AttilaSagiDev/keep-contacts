@@ -20,7 +20,7 @@ interface ContactRepositoryInterface
      * Save contact
      *
      * @param ContactInterface $contact
-     * @return ContactInterface
+     * @return \Space\KeepContacts\Api\Data\ContactInterface
      * @throws LocalizedException
      */
     public function save(ContactInterface $contact): ContactInterface;
