@@ -45,7 +45,7 @@ interface ContactRepositoryInterface
      * @param SearchCriteriaInterface $searchCriteria
      * @return \Space\KeepContacts\Api\Data\ContactSearchResultsInterface
      * @throws LocalizedException
- */
+     */
     public function getList(SearchCriteriaInterface $searchCriteria): ContactSearchResultsInterface;
 
     /**
