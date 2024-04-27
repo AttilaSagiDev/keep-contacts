@@ -10,20 +10,25 @@ namespace Space\KeepContacts\Api\Data;
 
 use Magento\Framework\Api\SearchResultsInterface;
 
+/**
+ * Interface for contact search results
+ * @api
+ * @note Had to remove short return type declaration because of web api support
+ */
 interface ContactSearchResultsInterface extends SearchResultsInterface
 {
     /**
      * Get contacts list
      *
-     * @return ContactInterface[]
+     * @return \Space\KeepContacts\Api\Data\ContactInterface[]
      */
-    public function getItems(): array;
+    public function getItems();
 
     /**
      * Set contacts list
      *
-     * @param ContactInterface[] $items
-     * @return ContactSearchResultsInterface
+     * @param \Space\KeepContacts\Api\Data\ContactInterface[] $items
+     * @return $this
      */
-    public function setItems(array $items): ContactSearchResultsInterface;
+    public function setItems(array $items);
 }
