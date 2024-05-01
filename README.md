@@ -1,4 +1,4 @@
-# **Magento 2.0 Keep Contacts Extension** #
+# **Magento 2 Keep Contacts Extension** #
 
 
 ## Description ##
@@ -12,9 +12,8 @@ Every single stored contact messages can be viewed by the administrator. The ext
 ## Features ##
 
 - Module enable/disable.
-- Enable modify original contact information.
 - Automatic storage and display messages.
-- Add Bcc email.
+- Add Cc email.
 - Include contact comment and information in the answer.
 - Send answer email from admin panel.
 - Custom email template.
@@ -24,92 +23,65 @@ Every single stored contact messages can be viewed by the administrator. The ext
 It is a separate module that does not change the default Magento files. 
  
 Support: 
-Magento Community Edition  2.0.x
+- Magento Community Edition  2.4.x
 
-Magento Enterprise Edition  2.0.x
+- Adobe Commerce 2.4.x
 
 ## Installation ##
 
 ** Important! Always install and test the extension in your development environment, and not on your live or production server. **
  
-1. Backup Your Data 
-Backup your store database and web directory. 
- 
-2. Clear Cache and cookies 
-Clear the store cache under var/cache and all cookies for your store domain. 
- 
-3. Disable Compilation 
-Disable Compilation, if it’s enabled.
+1. Backup Your Data
+   Backup your store database and whole Magento 2 directory.
 
-4. Upload Files 
-Unzip extension contents on your computer and navigate inside the extracted folder. Create folder app / code on your webserver if you don't have it already. Using your FTP client upload content of the directory to your store root / app / code folder.
+2. Enable extension
+   Please use the following commands in your Magento 2 console:
 
-5. Enable extension
-Please use the following commands in the /bin directory of your Magento 2.0 instance:
+   ```
+   bin/magento module:enable Space_KeepContacts
 
-    php magento module:enable Me_Econtacts
-
-    php magento setup:upgrade 
-
-One more time clear the cache under var/cache and var/page_cache login to Magento backend (admin panel). In case you have already been logged in during the installation, logout and login back. 
+   php magento setup:upgrade 
+   ```
 
 ## Configuration ##
  
-Login to Magento backend (admin panel).  You can find the module configuration here: Stores / Configuration, in the left menu Magevolve Extensions / Keep Contacts.
+Login to Magento backend (admin panel).  You can find the module configuration here: Stores / Configuration, in the left menu Space Extensions / Keep Contacts.
 
 Settings:
 
-** Basic **
+### Configuration ###
 
 Enable Extension: Here you can enable the extension.
-
-Enable modify contact: If you choose YES, the administrator will be able to modify the original contact information. 
  
-** Email Options **
+### Email Options ###
+
+Include Original Comment: Please select YES, if you want to include original contact comment in the answer.
 
 Email Sender: Please select the sender email address form the default configuration.
 
-Enable Bcc: Enable send answer email to Bcc address.
-
-Email Bcc (if Bcc enabled): Answer will be sent as Bcc to this email address.
+Email CC Emails To: Please enter the cc copy email address where notification will be also sent.
 
 Email Template: Email template chosen based on theme fallback when "Default" option is selected.
 
-Include Contact Comment: Please select YES, if you want to include original contact comment in the answer.
-
-Include Contact Information: Please select YES, if you want to include original contact information in the answer.
-
 ** Manage Contacts **
  
-You can find the Keep Contacts grid under the Content section in the admin panel. This admin grid contains all received contacts.
+You can find the Keep Contacts grid under the Marketing section in the admin panel. This admin grid contains all received contacts.
 
 ** Answer / Edit Contact **
 	 
-Please click on the row or the Answer link in the admin grid. On the next page you can edit the contact, and save it. Also you are able to send your answer email by filling out the "Answer" section and clicking on the Send Answer button. In this case the answer email will be sent and the contact will be saved as well.
+Please click on the row or the Edit/Answer link in the admin grid. On the next page you can edit the contact, and save it. Also, you are able to send your answer email by filling out the "Answer" section and clicking on the Save & Answer button. In this case the answer email will be sent and the contact will be saved as well.
 
-## Troubleshooting ##
- 
-1. After the extension installation I receive a 404 error in Stores / Configuration / Keep Contacts. 
-Clear the store cache, browser cookies, logout from backend and login back. 
- 
-2. My configuration changes do not appear on the store.
-Clear the store cache, clear your browser cache and domain cookies and refresh the page. 
- 
-## Extension license ##
- 
-The module license description included in the Terms and Conditions:  
-http://magevolve.com/terms-and-conditions  
+## Change Log ##
+
+Version 1.0.0 - May 1, 2024
+- Compatibility with Magento Community Edition  2.4.x
+
+- Compatibility with Adobe Commerce 2.4.x
  
 ## Support ##
- 
-If you have any questions about the extension, please contact us:
- 
-E-mail: info@magevolve.com
 
-Monday - Friday, 9am - 5pm CET
+If you have any questions about the extension, please contact with me.
 
 ## License ##
 
-See COPYING.txt for license details.
-
-Copyright © 2016 Magevolve Ltd. All rights reserved.
+MIT License.
