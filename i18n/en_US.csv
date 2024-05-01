@@ -1,0 +1,65 @@
+Back,Back
+"Delete Contact","Delete Contact"
+"Are you sure you want to do this?","Are you sure you want to do this?"
+"Save & Answer","Save & Answer"
+"Save options","Save options"
+"Save Only And Close","Save Only And Close"
+"Keep Contacts","Keep Contacts"
+Contacts,Contacts
+"You deleted the contact.","You deleted the contact."
+"Something went wrong while trying to delete contact.","Something went wrong while trying to delete contact."
+"We can't find the contact to delete.","We can't find the contact to delete."
+"Contact with id ""%1"" does not exist.","Contact with id ""%1"" does not exist."
+"Edit Contact","Edit Contact"
+"Contact from %1","Contact from %1"
+"Something went wrong while trying to with the contact.","Something went wrong while trying to with the contact."
+"A total of %1 record(s) have been deleted.","A total of %1 record(s) have been deleted."
+"Something went wrong while deleting the selected items.","Something went wrong while deleting the selected items."
+"A total of %1 record(s) have been updated.","A total of %1 record(s) have been updated."
+"Something went wrong while updating the selected items.","Something went wrong while updating the selected items."
+"Answer sent successfully and saved the contact.","Answer sent successfully and saved the contact."
+"You saved the contact.","You saved the contact."
+"The contact with the ""%1"" ID doesn't exist.","The contact with the ""%1"" ID doesn't exist."
+"Answer is empty","Answer is empty"
+No,No
+Yes,Yes
+"Unable to save contact information.","Unable to save contact information."
+"Edit / Answer","Edit / Answer"
+Delete,Delete
+"Delete %1","Delete %1"
+"Are you sure you want to delete a %1 record?","Are you sure you want to delete a %1 record?"
+"All Store Views","All Store Views"
+"Contact Email","Contact Email"
+"Dear %customer_name!","Dear %customer_name!"
+"Original Message:","Original Message:"
+"Store name: %store_name","Store name: %store_name"
+"Customer Name: %customer_name","Customer Name: %customer_name"
+"Customer Email: %customer_email","Customer Email: %customer_email"
+"Customer Telephone: %customer_telephone","Customer Telephone: %customer_telephone"
+Message:,Message:
+"Space Extensions","Space Extensions"
+Configuration,Configuration
+"Enable Extension","Enable Extension"
+"Email Options","Email Options"
+"Include Original Comment","Include Original Comment"
+"Email Sender","Email Sender"
+"Please select the email sender from store email addresses.","Please select the email sender from store email addresses."
+"Send CC Emails To","Send CC Emails To"
+"Please enter the cc copy email address where notification will be also sent.","Please enter the cc copy email address where notification will be also sent."
+"Email Template","Email Template"
+"Email template chosen based on theme fallback when ""Default"" option is selected.","Email template chosen based on theme fallback when ""Default"" option is selected."
+"General Information","General Information"
+"Set Is Answered","Set Is Answered"
+Name,Name
+Email,Email
+Telephone,Telephone
+"Store View","Store View"
+Comment,Comment
+Answer,Answer
+"Are you sure you want to delete selected items?","Are you sure you want to delete selected items?"
+"Delete items","Delete items"
+"Set Is Unanswered","Set Is Unanswered"
+ID,ID
+"Is Answered","Is Answered"
+Created,Created
+Modified,Modified

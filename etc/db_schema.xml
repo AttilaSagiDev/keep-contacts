@@ -1,0 +1,42 @@
+<?xml version="1.0"?>
+<!--
+/**
+ * Copyright (c) 2024 Attila Sagi
+ * @license http://www.opensource.org/licenses/mit-license.html  MIT License
+ */
+-->
+<schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+        xsi:noNamespaceSchemaLocation="urn:magento:framework:Setup/Declaration/Schema/etc/schema.xsd">
+    <table name="space_keep_contacts" resource="default" engine="innodb" comment="Keep Contacts Table">
+        <column xsi:type="smallint" name="contact_id" unsigned="false" nullable="false" identity="true"
+                comment="Entity ID"/>
+        <column xsi:type="varchar" name="name" nullable="false" length="255" comment="Contact Name"/>
+        <column xsi:type="varchar" name="email" nullable="false" length="255" comment="Contact Email"/>
+        <column xsi:type="varchar" name="telephone" nullable="true" length="255" comment="Contact Telephone"/>
+        <column xsi:type="mediumtext" name="comment" nullable="false" comment="Contact Comment"/>
+        <column xsi:type="mediumtext" name="answer" nullable="true" comment="Contact Answer"/>
+        <column xsi:type="timestamp" name="creation_time" on_update="false" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Contact Creation Time"/>
+        <column xsi:type="timestamp" name="update_time" on_update="true" nullable="false" default="CURRENT_TIMESTAMP"
+                comment="Contact Modification Time"/>
+        <column xsi:type="smallint" name="is_answered" unsigned="false" nullable="false" identity="false"
+                default="0" comment="Is Contact Answered"/>
+        <column xsi:type="smallint" name="store_id" unsigned="true" nullable="false" identity="false"
+                comment="Contact Store ID"/>
+        <constraint xsi:type="primary" referenceId="PRIMARY">
+            <column name="contact_id"/>
+        </constraint>
+        <index referenceId="SPACE_KEEP_CONTACTS_NAME_EMAIL_TELEPHONE_COMMENT_ANSWER" indexType="fulltext">
+            <column name="name"/>
+            <column name="email"/>
+            <column name="telephone"/>
+            <column name="comment"/>
+            <column name="answer"/>
+        </index>
+        <constraint xsi:type="foreign" referenceId="SPACE_KEEP_CONTACTS_STORE_ID_STORE_STORE_ID" table="keep_contacts"
+                    column="store_id" referenceTable="store" referenceColumn="store_id" onDelete="CASCADE"/>
+        <index referenceId="SPACE_KEEP_CONTACTS_STORE_ID" indexType="btree">
+            <column name="store_id"/>
+        </index>
+    </table>
+</schema>
