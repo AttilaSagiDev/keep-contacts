@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2024 Attila Sagi
+ * Copyright (c) 2026 Attila Sagi
  * @license http://www.opensource.org/licenses/mit-license.html  MIT License
  */
 
@@ -8,19 +8,20 @@ declare(strict_types=1);
 
 namespace Space\KeepContacts\Model\ResourceModel\Contact\Grid;
 
-use Magento\Framework\Api\Search\SearchResultInterface;
 use Magento\Framework\Api\Search\AggregationInterface;
-use Space\KeepContacts\Model\ResourceModel\Contact\Collection as ContactCollection;
+use Magento\Framework\Api\Search\SearchResultInterface;
+use Magento\Framework\Api\SearchCriteriaInterface;
 use Magento\Framework\App\ObjectManager;
+use Magento\Framework\Data\Collection\AbstractDb as CollectionAbstractDb;
 use Magento\Framework\Data\Collection\Db\FetchStrategyInterface;
 use Magento\Framework\Data\Collection\EntityFactoryInterface;
 use Magento\Framework\DB\Adapter\AdapterInterface;
-use Magento\Framework\View\Element\UiComponent\DataProvider\Document;
 use Magento\Framework\Event\ManagerInterface;
 use Magento\Framework\Model\ResourceModel\Db\AbstractDb;
 use Magento\Framework\Stdlib\DateTime\TimezoneInterface;
+use Magento\Framework\View\Element\UiComponent\DataProvider\Document;
 use Psr\Log\LoggerInterface;
-use Magento\Framework\Data\Collection\AbstractDb as CollectionAbstractDb;
+use Space\KeepContacts\Model\ResourceModel\Contact\Collection as ContactCollection;
 
 class Collection extends ContactCollection implements SearchResultInterface
 {
@@ -62,7 +63,7 @@ class Collection extends ContactCollection implements SearchResultInterface
      *
      * @SuppressWarnings(PHPMD.ExcessiveParameterList)
      */
-    public function __construct(
+    public function __construct(//NOSONAR
         EntityFactoryInterface $entityFactory,
         LoggerInterface $logger,
         FetchStrategyInterface $fetchStrategy,
@@ -72,9 +73,9 @@ class Collection extends ContactCollection implements SearchResultInterface
         string $eventObject,
         string $resourceModel,
         string $model = Document::class,
-        AdapterInterface $connection = null,
-        AbstractDb $resource = null,
-        TimezoneInterface $timeZone = null
+        ?AdapterInterface $connection = null,
+        ?AbstractDb $resource = null,
+        ?TimezoneInterface $timeZone = null
     ) {
         $this->resourceModel = $resourceModel;
         $this->model = $model;
@@ -141,23 +142,23 @@ class Collection extends ContactCollection implements SearchResultInterface
     }
 
     /**
-     * Get search criteria.
+     * Get search criteria
      *
-     * @return \Magento\Framework\Api\SearchCriteriaInterface|null
+     * @return SearchCriteriaInterface|null
      */
-    public function getSearchCriteria(): ?\Magento\Framework\Api\SearchCriteriaInterface
+    public function getSearchCriteria(): ?SearchCriteriaInterface
     {
         return null;
     }
 
     /**
-     * Set search criteria.
+     * Set search criteria
      *
-     * @param \Magento\Framework\Api\SearchCriteriaInterface $searchCriteria
+     * @param SearchCriteriaInterface|null $searchCriteria
      * @return $this
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
-    public function setSearchCriteria(\Magento\Framework\Api\SearchCriteriaInterface $searchCriteria = null): static
+    public function setSearchCriteria(?SearchCriteriaInterface $searchCriteria = null): static
     {
         return $this;
     }
@@ -185,13 +186,13 @@ class Collection extends ContactCollection implements SearchResultInterface
     }
 
     /**
-     * Set items list.
+     * Set items list
      *
-     * @param \Magento\Framework\Api\ExtensibleDataInterface[] $items
+     * @param \Magento\Framework\Api\ExtensibleDataInterface[]|null $items
      * @return $this
      * @SuppressWarnings(PHPMD.UnusedFormalParameter)
      */
-    public function setItems(array $items = null): static
+    public function setItems(?array $items = null): static
     {
         return $this;
     }
