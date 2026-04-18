@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2024 Attila Sagi
+ * Copyright (c) 2026 Attila Sagi
  * @license http://www.opensource.org/licenses/mit-license.html  MIT License
  */
 

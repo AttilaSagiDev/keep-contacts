@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2024 Attila Sagi
+ * Copyright (c) 2026 Attila Sagi
  * @license http://www.opensource.org/licenses/mit-license.html  MIT License
  */
 
@@ -31,7 +31,7 @@ class Contact extends AbstractDb
     public function __construct(
         Context $context,
         EntityManager $entityManager,
-        string $connectionName = null
+        ?string $connectionName = null
     ) {
         $this->entityManager = $entityManager;
         parent::__construct($context, $connectionName);
