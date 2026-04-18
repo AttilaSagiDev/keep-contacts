@@ -1,5 +1,6 @@
 # **Magento 2 Keep Contacts Extension** #
 
+[![M2 Coding Standard](https://github.com/AttilaSagiDev/keep-contacts/actions/workflows/codesniffer-actions.yml/badge.svg?branch=develop)](https://github.com/AttilaSagiDev/keep-contacts/actions/workflows/codesniffer-actions.yml)
 
 ## Description ##
 
