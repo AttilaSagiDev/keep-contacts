@@ -75,7 +75,9 @@ class EditTest extends TestCase
 
         $this->requestMock = $this->getMockForAbstractClass(RequestInterface::class);
         $this->messageManagerMock = $this->getMockForAbstractClass(ManagerInterface::class);
-        $this->redirectFactoryMock = $this->getMockBuilder(RedirectFactory::class)->disableOriginalConstructor()->getMock();
+        $this->redirectFactoryMock = $this->getMockBuilder(RedirectFactory::class)
+            ->disableOriginalConstructor()
+            ->getMock();
         $this->resultPageMock = $this->getMockBuilder(Page::class)->disableOriginalConstructor()->getMock();
 
         $this->resultPageMock->method('setActiveMenu')->willReturnSelf();

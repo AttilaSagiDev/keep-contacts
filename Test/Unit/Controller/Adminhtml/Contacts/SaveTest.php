@@ -75,7 +75,9 @@ class SaveTest extends TestCase
             ->getMock();
 
         $this->messageManagerMock = $this->getMockForAbstractClass(ManagerInterface::class);
-        $this->redirectFactoryMock = $this->getMockBuilder(RedirectFactory::class)->disableOriginalConstructor()->getMock();
+        $this->redirectFactoryMock = $this->getMockBuilder(RedirectFactory::class)
+            ->disableOriginalConstructor()
+            ->getMock();
         $this->redirectMock = $this->getMockBuilder(Redirect::class)->disableOriginalConstructor()->getMock();
 
         $this->redirectFactoryMock->method('create')->willReturn($this->redirectMock);
