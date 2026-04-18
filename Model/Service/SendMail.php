@@ -69,7 +69,7 @@ class SendMail
             )->setTemplateOptions(
                 [
                     'area' => Area::AREA_FRONTEND,
-                    'store' => $this->storeManager->getStore((int)$contact->getStoreId())->getStoreId()
+                    'store' => $this->storeManager->getStore((int)$contact->getStoreId())->getId()
                 ]
             )->setTemplateVars(
                 [
