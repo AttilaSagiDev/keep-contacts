@@ -15,12 +15,12 @@ class Options extends StoreOptionsColumn
     /**
      * All Store Views value
      */
-    private const ALL_STORE_VIEWS = '0';
+    private const string ALL_STORE_VIEWS = '0';
 
     /**
      * All Store Views label
      */
-    private const ALL_STORE_VIEWS_LABEL = 'All Store Views';
+    private const string ALL_STORE_VIEWS_LABEL = 'All Store Views';
 
     /**
      * Get options
