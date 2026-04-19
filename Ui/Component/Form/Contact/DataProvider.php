@@ -28,9 +28,9 @@ class DataProvider extends ModifierPoolDataProvider
     private DataPersistorInterface $dataPersistor;
 
     /**
-     * @var array
+     * @var array|null
      */
-    private array $loadedData;
+    private ?array $loadedData = null;
 
     /**
      * @param string $name
@@ -71,9 +71,12 @@ class DataProvider extends ModifierPoolDataProvider
      */
     public function getData(): array
     {
-        if (isset($this->loadedData)) {
+        if (null !== $this->loadedData) {
             return $this->loadedData;
         }
+
+        $this->loadedData = [];
+
         $items = $this->collection->getItems();
         /** @var Contact $contact */
         foreach ($items as $contact) {

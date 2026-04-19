@@ -114,7 +114,6 @@ class CollectionTest extends TestCase
 
     public function testGetTotalCount()
     {
-        // TotalCount calls getSize(), which uses fetchOne on the adapter
         $this->adapterMock->method('fetchOne')->willReturn(5);
         $this->assertEquals(5, $this->model->getTotalCount());
     }
