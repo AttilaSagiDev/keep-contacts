@@ -74,7 +74,7 @@ Please click on the row or the Edit/Answer link in the admin grid. On the next p
 
 ## Change Log ##
 
-Version 1.0.1 - April 18, 2026
+Version 1.0.1 - May 16, 2026
 - Add unit tests
 - PHP 8.4 upgrades
 
