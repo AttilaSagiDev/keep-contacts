@@ -19,8 +19,8 @@ class ContactActions extends Column
     /**
      * Url path's
      */
-    public const URL_PATH_EDIT = 'keep_contacts/contacts/edit';
-    public const URL_PATH_DELETE = 'keep_contacts/contacts/delete';
+    public const string URL_PATH_EDIT = 'keep_contacts/contacts/edit';
+    public const string URL_PATH_DELETE = 'keep_contacts/contacts/delete';
 
     /**
      * @var UrlInterface

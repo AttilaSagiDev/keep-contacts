@@ -1,6 +1,6 @@
 <?php
 /**
- * Copyright (c) 2024 Attila Sagi
+ * Copyright (c) 2026 Attila Sagi
  * @license http://www.opensource.org/licenses/mit-license.html  MIT License
  */
 
@@ -28,9 +28,9 @@ class DataProvider extends ModifierPoolDataProvider
     private DataPersistorInterface $dataPersistor;
 
     /**
-     * @var array
+     * @var array|null
      */
-    private array $loadedData;
+    private ?array $loadedData = null;
 
     /**
      * @param string $name
@@ -42,7 +42,7 @@ class DataProvider extends ModifierPoolDataProvider
      * @param array $data
      * @param PoolInterface|null $pool
      */
-    public function __construct(
+    public function __construct(//NOSONAR
         string $name,
         string $primaryFieldName,
         string $requestFieldName,
@@ -50,7 +50,7 @@ class DataProvider extends ModifierPoolDataProvider
         DataPersistorInterface $dataPersistor,
         array $meta = [],
         array $data = [],
-        PoolInterface $pool = null
+        ?PoolInterface $pool = null
     ) {
         $this->collection = $contactCollectionFactory->create();
         $this->dataPersistor = $dataPersistor;
@@ -71,9 +71,12 @@ class DataProvider extends ModifierPoolDataProvider
      */
     public function getData(): array
     {
-        if (isset($this->loadedData)) {
+        if (null !== $this->loadedData) {
             return $this->loadedData;
         }
+
+        $this->loadedData = [];
+
         $items = $this->collection->getItems();
         /** @var Contact $contact */
         foreach ($items as $contact) {

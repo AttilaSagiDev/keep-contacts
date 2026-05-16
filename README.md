@@ -1,5 +1,6 @@
 # **Magento 2 Keep Contacts Extension** #
 
+[![M2 Coding Standard](https://github.com/AttilaSagiDev/keep-contacts/actions/workflows/codesniffer-actions.yml/badge.svg?branch=develop)](https://github.com/AttilaSagiDev/keep-contacts/actions/workflows/codesniffer-actions.yml)
 
 ## Description ##
 
@@ -72,6 +73,10 @@ You can find the Keep Contacts grid under the Marketing section in the admin pan
 Please click on the row or the Edit/Answer link in the admin grid. On the next page you can edit the contact, and save it. Also, you are able to send your answer email by filling out the "Answer" section and clicking on the Save & Answer button. In this case the answer email will be sent and the contact will be saved as well.
 
 ## Change Log ##
+
+Version 1.0.1 - May 16, 2026
+- Add unit tests
+- PHP 8.4 upgrades
 
 Version 1.0.0 - May 1, 2024
 - Compatibility with Magento Community Edition  2.4.x
